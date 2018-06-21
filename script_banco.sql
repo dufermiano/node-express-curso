@@ -12,3 +12,5 @@ INSERT INTO livros (title, descricao, preco) VALUES ('Comecando com nodejs', 'Li
 INSERT INTO livros (title, descricao, preco) VALUES ('Comecando com express', 'Livro introdutorio de express', 39.90);
 
 SELECT * FROM LIVROS;
+
+UPDATE LIVROS SET PRECO = 39.9 WHERE id = 1

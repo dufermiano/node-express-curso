@@ -1,14 +1,21 @@
 const express = require('express')
 const port = 3000
+const consign = require('consign')
 const server = express()
 
 server.set('view engine', 'ejs')
 server.use(express.static('./public'))
 
-require('./app.js').rotas(server)
+//lib consign que faz o include de todas as pastas
+//serve para rotas, controlers, models...
 
-// const objeto = require('./app.js')
-// objeto.rotas(server)
+consign()
+  .include('./routers')
+  .into(server)
+
+server.use((req, res) => {
+    res.send('Essa página não existe!')
+})
 
 server.listen(port, () => {
   console.log(`Servidor de pé em http://localhost:${port}`)
