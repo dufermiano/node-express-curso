@@ -1,5 +1,5 @@
 {
-  "name": "casadocodigo",
+  "name": "node-server",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -16,6 +16,6 @@
     "dev": "nodemon",
     "start": "node server.js"
   },
-  "author": "Marco Bruno",
-  "license": "MPL-2.0"
+  "author": "Eduardo Fermiano",
+  "license": "ISC"
 }
