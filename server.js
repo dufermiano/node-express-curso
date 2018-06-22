@@ -3,6 +3,7 @@ const port = 3000
 const consign = require('consign')
 const bodyParser = require('body-parser')
 const server = express()
+require('dotenv').config()
 
 server.set('view engine', 'ejs')
 server.use(express.static('./public'))
