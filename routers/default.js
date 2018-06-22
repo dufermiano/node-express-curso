@@ -17,6 +17,10 @@ function rotas(server) {
     res.render('produtos/form')
   })
 
+  server.get('/login', (req, res) => {
+    res.render('usuario/login')
+  })
+
 }
 
 module.exports = rotas

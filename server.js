@@ -1,10 +1,12 @@
 const express = require('express')
 const port = 3000
 const consign = require('consign')
+const bodyParser = require('body-parser')
 const server = express()
 
 server.set('view engine', 'ejs')
 server.use(express.static('./public'))
+server.use(bodyParser.urlencoded({extended: true}))
 
 //lib consign que faz o include de todas as pastas
 //serve para rotas, controlers, models...
